@@ -47,6 +47,12 @@
         <span class="menu-title">Sosya Hesaplar</span>
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.customer_reviews.index') }}">
+        <i class="ti-face-smile menu-icon"></i>
+        <span class="menu-title">Müşteri Yorumları</span>
+    </a>
+</li>
 <!--
 <li class="nav-item">
     <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
