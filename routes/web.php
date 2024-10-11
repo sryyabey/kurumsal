@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\PagesController;
 use App\Http\Controllers\Admin\ContactFormController;
+use App\Http\Controllers\Admin\GalleryImageController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,6 +21,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('pages', PagesController::class)->names('pages');
+
+    Route::resource('gallery', GalleryImageController::class)->names('gallery');
 
     // contact form
     Route::get('contact-forms', [ContactFormController::class, 'index'])->name('contact-forms.index');
