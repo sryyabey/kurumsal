@@ -29,6 +29,12 @@
         <span class="menu-title">Ekibimiz</span>
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.company_address.index') }}">
+        <i class="ti-direction-alt menu-icon"></i>
+        <span class="menu-title">Adres</span>
+    </a>
+</li>
 <!--
 <li class="nav-item">
     <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
