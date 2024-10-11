@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\GalleryImageController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\CompanyAddressController;
 use App\Http\Controllers\Admin\OurServiceController;
+use App\Http\Controllers\Admin\SocialController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,6 +32,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
     Route::resource('company_address', CompanyAddressController::class)->names('admin.company_address');
     Route::resource('our_services', OurServiceController::class)->names('admin.our_services');
+    Route::resource('socials', SocialController::class)->names('admin.socials');
 
 
     // contact form

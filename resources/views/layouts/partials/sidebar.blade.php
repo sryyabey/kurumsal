@@ -41,6 +41,12 @@
         <span class="menu-title">Hizmetlerimiz</span>
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.socials.index') }}">
+        <i class="ti-facebook menu-icon"></i>
+        <span class="menu-title">Sosya Hesaplar</span>
+    </a>
+</li>
 <!--
 <li class="nav-item">
     <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
