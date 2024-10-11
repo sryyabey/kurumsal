@@ -7,7 +7,7 @@
         <a href="{{ route('admin.our_services.create') }}" class="btn btn-primary mb-3">Add New Service</a>
 
         @if ($services->count())
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive-sm">
                 <thead>
                 <tr>
                     <th>Title</th>

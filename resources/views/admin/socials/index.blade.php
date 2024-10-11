@@ -9,7 +9,7 @@
         <a href="{{ route('admin.socials.create') }}" class="btn btn-primary mb-3">Add New Social Media</a>
 
         @if ($socials->count())
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive-sm">
                 <thead>
                 <tr>
                     <th>Title</th>

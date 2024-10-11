@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1>İletişim Formu Gelenler</h1>
-        <table class="table">
+        <table class="table table-responsive-sm">
             <thead>
             <tr>
                 <th>ID</th>

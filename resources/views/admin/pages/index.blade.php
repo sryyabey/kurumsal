@@ -4,7 +4,7 @@
     <div class="container">
         <h1>Sayfalar</h1>
         <a href="{{ route('pages.create') }}" class="btn btn-primary mb-3">Yeni Sayfa Ekle</a>
-        <table class="table">
+        <table class="table table-responsive-sm">
             <thead>
             <tr>
                 <th>Resim</th>

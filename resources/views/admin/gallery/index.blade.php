@@ -8,7 +8,7 @@
         <a href="{{ route('gallery.create') }}" class="btn btn-primary mb-3">Add New Image</a>
 
         @if ($images->count())
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive-sm">
                 <thead>
                 <tr>
                     <th>Title</th>

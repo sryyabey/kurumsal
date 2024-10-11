@@ -8,7 +8,7 @@
         <a href="{{ route('admin.team.create') }}" class="btn btn-primary mb-3">Yeni Ekip Üyesi Ekle</a>
 
         @if ($teams->count())
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive-sm">
                 <thead>
                 <tr>
                     <th>Profile Image</th>

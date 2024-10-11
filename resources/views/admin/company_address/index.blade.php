@@ -7,7 +7,7 @@
         <a href="{{ route('admin.company_address.create') }}" class="btn btn-primary mb-3">Add New Address</a>
 
         @if ($addresses->count())
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive-sm">
                 <thead>
                 <tr>
                     <th>Title</th>
