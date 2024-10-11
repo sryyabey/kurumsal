@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PagesController;
 use App\Http\Controllers\Admin\ContactFormController;
 use App\Http\Controllers\Admin\GalleryImageController;
+use App\Http\Controllers\Admin\TeamController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,6 +25,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('pages', PagesController::class)->names('pages');
 
     Route::resource('gallery', GalleryImageController::class)->names('gallery');
+
+    Route::resource('team', TeamController::class)->names('admin.team');
 
     // contact form
     Route::get('contact-forms', [ContactFormController::class, 'index'])->name('contact-forms.index');
