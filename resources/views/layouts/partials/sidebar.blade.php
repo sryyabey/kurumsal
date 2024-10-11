@@ -35,6 +35,12 @@
         <span class="menu-title">Adres</span>
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.our_services.index') }}">
+        <i class="ti-target menu-icon"></i>
+        <span class="menu-title">Hizmetlerimiz</span>
+    </a>
+</li>
 <!--
 <li class="nav-item">
     <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
