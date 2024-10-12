@@ -22,7 +22,7 @@
                 @foreach ($images as $image)
                     <tr>
                         <td>{{ $image->title }}</td>
-                        <td>{{ $image->description }}</td>
+                        <td>{{ Str::limit($image->description,50) }}</td>
                         <td>{{ $image->status }}</td>
                         <td>
                             <img src="{{ $image->getFirstMediaUrl('gallery_images') }}" alt="{{ $image->title }}" width="100">

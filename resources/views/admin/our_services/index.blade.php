@@ -24,7 +24,7 @@
                     <tr>
                         <td>{{ $service->title }}</td>
                         <td>{{ $service->icon }}</td>
-                        <td>{{ $service->description }}</td>
+                        <td>{{ Str::limit($service->description,50) }}</td>
                         <td>{{ $service->number }}</td>
                         <td>{{ $service->location }}</td>
                         <td>{{ ucfirst($service->status) }}</td>
