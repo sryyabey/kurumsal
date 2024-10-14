@@ -11,11 +11,11 @@ use App\Http\Controllers\Admin\CompanyAddressController;
 use App\Http\Controllers\Admin\OurServiceController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\CustomerReviewController;
+use App\Http\Controllers\Web\WellcomeController;
 
+Route::get('/',[WellcomeController::class,'index'])->name('welcome');
+Route::post('/contact_me',[WellcomeController::class,'contact_form'])->name('contact_me');
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
