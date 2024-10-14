@@ -92,8 +92,8 @@
                         <figure class="about-icon"><img src="{{ asset('web/images/app-development.png') }}" alt="app-development"></figure>
 
                         <div class="about-box">
-                            <h3>App Development</h3>
-                            <p>Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
+                            <h3>Hakkımızda</h3>
+                            <p>Hakkımızda durumları </p>
                         </div>
                     </div>
                 @endforelse
@@ -138,8 +138,8 @@
                 <!-- parallax header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="parallax-header">
-                        <h2 class="parallax-title"><span>Our Philosophy is</span></h2>
-                        <p class="parallax-slogan">Passion leads to design, design leads to performance , performance leads to <strong>success</strong>!</p>
+                        <h2 class="parallax-title"><span>slogan</span></h2>
+                        <p class="parallax-slogan">slogan <strong>description</strong>!</p>
                     </header>
                 </div>
                 <!-- close parallax header -->
@@ -165,7 +165,7 @@
                     <!-- parallax header -->
                     <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                         <header class="parallax-header">
-                            <h2 class="parallax-title"><span>Some Fun Facts</span></h2>
+                            <h2 class="parallax-title"><span>Some Fun Facts Yapılanlar</span></h2>
                             <p class="parallax-slogan">Each completed project makes us even more hungry, hungry for more designs, more code and at least some more twinkies. As a result we deliver a better web <strong>experience</strong>.</p>
                         </header>
                     </div>
@@ -271,7 +271,7 @@
                 <div class="grid-33 mobile-grid-50 tablet-grid-50">
                     <a class="portfolio-popup" href="images/portfolio/large/p2.jpg">
                         <div class="portfolio-box">
-                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p2.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p2.jpg" alt="portfolio image"></figure><!-- close portfolio image
                             <div class="portfolio-caption">
                                 <h3 class="portfolio-title">Angelica<span class="portfolio-category">Photography</span></h3>
                             </div><!-- close portfolio caption -->
@@ -283,22 +283,22 @@
                 <div class="grid-33 mobile-grid-50 tablet-grid-50">
                     <a class="portfolio-popup-video" href="http://www.youtube.com/watch?v=ZouARplh7iY">
                         <div class="portfolio-box">
-                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p3.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p3.jpg" alt="portfolio image"></figure><!-- close portfolio image
                             <div class="portfolio-caption">
                                 <h3 class="portfolio-title">iMac<span class="portfolio-category">Video</span></h3>
                             </div><!-- close portfolio caption -->
                         </div>
                     </a>
-                </div><!-- close portfolio -->
+                </div><!-- close portfolio
 
                 <!-- portfolio box 4
                 <div class="grid-33 mobile-grid-50 tablet-grid-50">
                     <a class="portfolio-popup" href="images/portfolio/large/p4.jpg">
                         <div class="portfolio-box">
-                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p4.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p4.jpg" alt="portfolio image"></figure><!-- close portfolio image
                             <div class="portfolio-caption">
                                 <h3 class="portfolio-title">Brooklyn<span class="portfolio-category">Logo Design</span></h3>
-                            </div><!-- close portfolio caption -->
+                            </div><!-- close portfolio caption
                         </div>
                     </a>
                 </div><!-- close portfolio -->
@@ -307,10 +307,10 @@
                 <div class="grid-33 mobile-grid-50 tablet-grid-50">
                     <a class="portfolio-popup" href="images/portfolio/large/p5.jpg">
                         <div class="portfolio-box">
-                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p5.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p5.jpg" alt="portfolio image"></figure><!-- close portfolio image
                             <div class="portfolio-caption">
                                 <h3 class="portfolio-title">Street<span class="portfolio-category">Photography</span></h3>
-                            </div><!-- close portfolio caption -->
+                            </div><!-- close portfolio caption
                         </div>
                     </a>
                 </div><!-- close portfolio -->
@@ -319,10 +319,10 @@
                 <div class="grid-33 mobile-grid-50 tablet-grid-50">
                     <a class="portfolio-popup" href="images/portfolio/large/p6.jpg">
                         <div class="portfolio-box">
-                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p6.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p6.jpg" alt="portfolio image"></figure><!-- close portfolio image
                             <div class="portfolio-caption">
                                 <h3 class="portfolio-title">Cecilia<span class="portfolio-category">Photography</span></h3>
-                            </div><!-- close portfolio caption -->
+                            </div><!-- close portfolio caption
                         </div>
                     </a>
                 </div><!-- close portfolio -->
@@ -331,10 +331,10 @@
                 <div class="grid-33 mobile-grid-50 tablet-grid-50">
                     <a class="portfolio-popup" href="images/portfolio/large/p7.jpg">
                         <div class="portfolio-box">
-                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p7.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p7.jpg" alt="portfolio image"></figure><!-- close portfolio image
                             <div class="portfolio-caption">
                                 <h3 class="portfolio-title">Tree<span class="portfolio-category">Photography</span></h3>
-                            </div><!-- close portfolio caption -->
+                            </div><!-- close portfolio caption
                         </div>
                     </a>
                 </div><!-- close portfolio -->
@@ -343,10 +343,10 @@
                 <div class="grid-33 mobile-grid-50 tablet-grid-50">
                     <a class="portfolio-popup" href="images/portfolio/large/p8.jpg">
                         <div class="portfolio-box">
-                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p8.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p8.jpg" alt="portfolio image"></figure><!-- close portfolio image
                             <div class="portfolio-caption">
                                 <h3 class="portfolio-title">Bridge<span class="portfolio-category">Photography</span></h3>
-                            </div><!-- close portfolio caption -->
+                            </div><!-- close portfolio caption
                         </div>
                     </a>
                 </div><!-- close portfolio -->
@@ -355,10 +355,10 @@
                 <div class="grid-33 mobile-grid-50 tablet-grid-50">
                     <a class="portfolio-popup" href="images/portfolio/large/p9.jpg">
                         <div class="portfolio-box">
-                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p9.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+                            <figure class="portfolio-image"><img src="images/portfolio/thumb/p9.jpg" alt="portfolio image"></figure><!-- close portfolio image
                             <div class="portfolio-caption">
                                 <h3 class="portfolio-title">Headphone<span class="portfolio-category">Photography</span></h3>
-                            </div><!-- close portfolio caption -->
+                            </div><!-- close portfolio caption
                         </div>
                     </a>
                 </div><!-- close portfolio -->

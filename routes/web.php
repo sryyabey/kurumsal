@@ -12,6 +12,8 @@ use App\Http\Controllers\Admin\OurServiceController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\CustomerReviewController;
 use App\Http\Controllers\Web\WellcomeController;
+use App\Http\Controllers\Admin\SettingController;
+
 
 Route::get('/',[WellcomeController::class,'index'])->name('welcome');
 Route::post('/contact_me',[WellcomeController::class,'contact_form'])->name('contact_me');
@@ -31,6 +33,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('gallery', GalleryImageController::class)->names('gallery');
 
     Route::resource('team', TeamController::class)->names('admin.team');
+    Route::resource('setting', SettingController::class)->names('admin.settings');
 
     Route::resource('company_address', CompanyAddressController::class)->names('admin.company_address');
     Route::resource('our_services', OurServiceController::class)->names('admin.our_services');
