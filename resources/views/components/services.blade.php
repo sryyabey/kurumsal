@@ -7,8 +7,8 @@
                 <!-- entry header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="parallax-header">
-                        <h2 class="parallax-title"><span>Hizmetlerimiz</span></h2>
-                        <p class="parallax-slogan">Our <strong>quality standards</strong> apply also in terms of service, technical expertise and advice. Our dedicated employees are happy to assist you with know-how and experience in your daily business.</p>
+                        <h2 class="parallax-title"><span>{{ $setting->services_title }}</span></h2>
+                        <p class="parallax-slogan">{!! $setting->services_description !!}</p>
                     </header>
                 </div>
                 <!-- close entry header -->

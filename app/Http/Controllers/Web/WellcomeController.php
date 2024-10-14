@@ -9,6 +9,7 @@ use App\Models\CustomerReview;
 use App\Models\GalleryImage;
 use App\Models\OurService;
 use App\Models\Page;
+use App\Models\Setting;
 use App\Models\Social;
 use App\Models\Team;
 use Illuminate\Http\Request;
@@ -32,8 +33,8 @@ class WellcomeController extends Controller
         $teams = Team::all();
         $galleries = GalleryImage::all();
         $pages = Page::all();
-
-        return view('welcome',compact('address','comments','socials','services','teams','galleries','pages'));
+        $setting = Setting::first();
+        return view('welcome',compact('address','comments','socials','services','teams','galleries','pages','setting'));
     }
 
     public function contact_form(Request $request)

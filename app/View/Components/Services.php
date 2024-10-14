@@ -13,6 +13,7 @@ class Services extends Component
      */
     public function __construct(
         public object $services,
+        public object $setting,
     ) {}
 
     /**

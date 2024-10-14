@@ -13,6 +13,7 @@ class Social extends Component
      */
     public function __construct(
         public object $socials,
+        public object $setting,
     ) {}
 
     /**

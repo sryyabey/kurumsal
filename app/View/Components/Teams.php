@@ -13,6 +13,7 @@ class Teams extends Component
      */
     public function __construct(
         public object $teams,
+        public object $setting,
     ) {}
 
     /**

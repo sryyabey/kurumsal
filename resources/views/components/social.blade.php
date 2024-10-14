@@ -7,8 +7,8 @@
                 <!-- parallax header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="parallax-header">
-                        <h2 class="parallax-title"><span>Get Connected</span></h2>
-                        <p class="parallax-slogan">The <strong>NSA</strong> already takes care of our social media profiles, for everyone else who wants to get connected with us regularly , do not hesitate , we are waiting for <strong>you</strong>!</p>
+                        <h2 class="parallax-title"><span>{{ $setting->social_title }}</span></h2>
+                        <p class="parallax-slogan">{!! $setting->social_description !!}</p>
                     </header>
                 </div>
                 <!-- close parallax header -->

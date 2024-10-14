@@ -5,8 +5,8 @@
             <!-- section header -->
             <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                 <header class="section-header">
-                    <h2 class="section-title"><span>Our Team</span></h2>
-                    <p class="section-slogan">We believe in a <strong>diverse</strong> range of personel to bring creative skills, thoughts, and <strong>ideas</strong> to the table.</p>
+                    <h2 class="section-title"><span>{{ $setting->team_title }}</span></h2>
+                    <p class="section-slogan">{!! $setting->team_description !!}</p>
                 </header>
             </div>
             <!-- close section header -->

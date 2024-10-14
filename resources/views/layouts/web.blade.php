@@ -73,8 +73,8 @@
                 <!-- section header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="section-header">
-                        <h2 class="section-title"><span>About Brooklyn</span></h2>
-                        <p class="section-slogan">We are a creative agency located in <strong>Brooklyn</strong>, <strong>New York</strong>. We’ve won a ton of awards and have been featured in all of the magazines.</p>
+                        <h2 class="section-title"><span>{{ $setting->about_title }}</span></h2>
+                        <p class="section-slogan">{!! $setting->about_description !!}</p>
                     </header>
                 </div>
                 <!-- close section header -->
@@ -92,8 +92,8 @@
                         <figure class="about-icon"><img src="{{ asset('web/images/app-development.png') }}" alt="app-development"></figure>
 
                         <div class="about-box">
-                            <h3>Hakkımızda</h3>
-                            <p>Hakkımızda durumları </p>
+                            <h3></h3>
+                            <p> </p>
                         </div>
                     </div>
                 @endforelse
@@ -138,8 +138,8 @@
                 <!-- parallax header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="parallax-header">
-                        <h2 class="parallax-title"><span>slogan</span></h2>
-                        <p class="parallax-slogan">slogan <strong>description</strong>!</p>
+                        <h2 class="parallax-title"><span>{{ $setting->slogan_title }}</span></h2>
+                        <p class="parallax-slogan">{!! $setting->slogan_description !!}</p>
                     </header>
                 </div>
                 <!-- close parallax header -->
@@ -153,7 +153,7 @@
 
     <!-- team section -->
     <div class="nav-waypoint">
-        <x-teams :$teams />
+        <x-teams :$teams :$setting />
         <div class="clear"></div>
 
         <!-- Counter Section -->
@@ -165,8 +165,8 @@
                     <!-- parallax header -->
                     <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                         <header class="parallax-header">
-                            <h2 class="parallax-title"><span>Some Fun Facts Yapılanlar</span></h2>
-                            <p class="parallax-slogan">Each completed project makes us even more hungry, hungry for more designs, more code and at least some more twinkies. As a result we deliver a better web <strong>experience</strong>.</p>
+                            <h2 class="parallax-title"><span>{{ $setting->statistic_title }}</span></h2>
+                            <p class="parallax-slogan">{!! $setting->statistic_description !!}</p>
                         </header>
                     </div>
                     <!-- close parallax header -->
@@ -221,7 +221,7 @@
 
     <!-- service section -->
     <div class="nav-waypoint">
-       <x-services :$services />
+       <x-services :$services :$setting />
     </div><!-- close nav-waypoint -->
 
     <div class="clear"></div>
@@ -234,8 +234,8 @@
                 <!-- section header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="section-header">
-                        <h2 class="section-title"><span>Work</span></h2>
-                        <p class="section-slogan">We believe our work <strong>speaks</strong> for itself. Browse our most recent projects below.</p>
+                        <h2 class="section-title"><span>{{ $setting->gallery_title }}</span></h2>
+                        <p class="section-slogan">{{ $setting->gallery_description }}</p>
                     </header>
                 </div>
                 <!-- close section header -->
@@ -369,7 +369,7 @@
         <div class="clear"></div>
 
         <!-- social section -->
-        <x-social :$socials/>
+        <x-social :$socials :$setting/>
     </div><!-- close nav-waypoint -->
 
     <div class="clear"></div>
@@ -383,8 +383,8 @@
                 <!-- section header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="section-header">
-                        <h2 class="section-title"><span>Happy Clients</span></h2>
-                        <p class="section-slogan">Over <strong>10.500</strong> extremely satisfied clients!</p>
+                        <h2 class="section-title"><span>{{ $setting->preview_title }}</span></h2>
+                        <p class="section-slogan">{!! $setting->preview_description !!}</p>
                     </header>
                 </div>
                 <!-- close section header -->
@@ -491,8 +491,8 @@
                 <!-- parallax header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="parallax-header">
-                        <h2 class="parallax-title"><span>Bize Ulaşın</span></h2>
-                        <p class="parallax-slogan">En kısa sürede <strong>size</strong> dönüyoruz !</p>
+                        <h2 class="parallax-title"><span>{{ $setting->contact_title }}</span></h2>
+                        <p class="parallax-slogan">{!! $setting->contact_description !!}</p>
                     </header>
                 </div>
                 <!-- close parallax header -->
@@ -566,8 +566,8 @@
         <a href="#top" class="toTop"><i class="icon-angle-up"></i></a>
         <div class="grid-container">
             <div class="grid-100 mobile-grid-100 tablet-grid-100">
-                <h3>We <i class="icon-heart"></i> your mom.</h3>
-                <span class="copyright">Powered by <a href="htt://www.unitedthemes.com" target="_blank">United Themes</a></span>
+                <h3>{!!  $setting->footer_title !!} </h3>
+                <span class="copyright">Powered by <a href="htts://sryya.dev" target="_blank">United Themes | sryya.dev</a></span>
             </div>
         </div><!-- close container -->
     </footer><!-- close footer -->
