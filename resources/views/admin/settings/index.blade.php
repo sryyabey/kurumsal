@@ -19,11 +19,11 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>About Title</th>
-                <th>Slogan Title</th>
-                <th>Team Title</th>
-                <th>Statistic Title</th>
-                <th>Actions</th>
+                <th>Hakkımızda Başlık</th>
+                <th>Slogan Başlık</th>
+                <th>Ekibimiz Title</th>
+                <th>İstatistikler Title</th>
+                <th>İşlemler</th>
             </tr>
             </thead>
             <tbody>
