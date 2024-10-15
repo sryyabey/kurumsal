@@ -71,7 +71,15 @@
             <div class="hero-inner">
                 <span class="hero-description">main başlık</span>
                 <div class="hero-title-holder">
-                    <h1 class="hero-title">seviyoruz <span>Burayı</span></h1>
+                    <h1 class="hero-title">
+                        @forelse($sliders as $key => $slider)
+                            @if($key == 0)
+                                {!! $slider->title !!}
+                            @endif
+                        @empty
+                            ----
+                        @endforelse
+                    </h1>
                 </div>
                 <span class="btn-holder"><a id="to-about-section" class="hero-btn">HaleNur </a></span>
             </div>
@@ -592,22 +600,27 @@
 </div>
 
 @include('layouts.web_partials.footer')
-<script>
+<script type="text/javascript">
     var ut_word_rotator = function() {
 
-        var ut_rotator_words = [
-                'Bizler <span>Bursayız </span>',
-                'We love to <span>İzmir</span>',
-                'We love <span>U</span>'
-            ] ,
-            counter = 0;
+        // Blade üzerinden gelen verileri JSON formatına çevirip JavaScript'e aktarıyoruz
+        var ut_rotator_words = {!! json_encode($sliders->map(function($word) {
+            return $word->title ;
+        })) !!};
+
+        var counter = 0;
 
         setInterval(function() {
             $(".hero-title").fadeOut(function(){
                 $(this).html(ut_rotator_words[counter=(counter+1)%ut_rotator_words.length]).fadeIn();
             });
         }, 3000 );
-    }
+    };
+
+    // Sayfa yüklendikten sonra fonksiyonu çalıştırıyoruz
+    $(document).ready(function() {
+        ut_word_rotator();
+    });
 </script>
 
 <!-- End Document

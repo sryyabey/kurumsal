@@ -10,9 +10,11 @@ use App\Models\GalleryImage;
 use App\Models\OurService;
 use App\Models\Page;
 use App\Models\Setting;
+use App\Models\Slider;
 use App\Models\Social;
 use App\Models\Team;
 use Illuminate\Http\Request;
+use function Symfony\Component\String\s;
 
 class WellcomeController extends Controller
 {
@@ -34,7 +36,9 @@ class WellcomeController extends Controller
         $galleries = GalleryImage::all();
         $pages = Page::all();
         $setting = Setting::first();
-        return view('welcome',compact('address','comments','socials','services','teams','galleries','pages','setting'));
+        $sliders = Slider::all();
+
+        return view('welcome',compact('address','comments','socials','services','teams','galleries','pages','setting','sliders'));
     }
 
     public function contact_form(Request $request)
