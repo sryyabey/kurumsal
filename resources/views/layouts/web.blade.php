@@ -10,6 +10,22 @@
 
 <head>
    @include('layouts.web_partials.header')
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body id="mainsite">
@@ -18,7 +34,9 @@
 
 <!-- Page Layout
 ================================================== -->
-
+<a href="https://wa.me/905425061949" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 <!-- header section -->
 <header id="header-section" class="ha-header ha-header-hide">
     <div class="grid-container">
@@ -28,13 +46,13 @@
                     <h1 class="logo"><a href="#top"><img src="{{ asset('web/images/logo.png') }}" alt="logo"></a></h1>
                 </div>
                 <nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile">
-                    <a class="selected" href="#top">Home</a>
-                    <a href="#about-section">About</a>
-                    <a href="#team-section">Team</a>
-                    <a href="#service-section">Service</a>
-                    <a href="#portfolio-section">Work</a>
-                    <a href="#testimonial-section">Clients</a>
-                    <a href="#contact-section">Contact</a>
+                    <a class="selected" href="#top">Anasayfa</a>
+                    <a href="#about-section">Hakkımızda</a>
+                    <a href="#team-section">Ekibimiz</a>
+                    <a href="#service-section">Hizmetlerimiz</a>
+                    <a href="#portfolio-section">Galeri</a>
+                    <a href="#testimonial-section">Yorumlar</a>
+                    <a href="#contact-section">İletişim</a>
                 </nav>
             </div>
         </div><!-- close .ha-header-perspective -->
