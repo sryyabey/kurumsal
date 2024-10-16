@@ -15,6 +15,7 @@ use App\Http\Controllers\Web\WellcomeController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\BackgroundImageController;
+use App\Http\Controllers\Admin\LogoController;
 
 
 Route::get('/',[WellcomeController::class,'index'])->name('welcome');
@@ -43,6 +44,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('customer_reviews', CustomerReviewController::class)->names('admin.customer_reviews');
     Route::resource('sliders', SliderController::class)->names('admin.sliders');
     Route::resource('background-images', BackgroundImageController::class)->names('admin.background-images');
+    Route::resource('logos', LogoController::class)->names('admin.logos');
 
 
 

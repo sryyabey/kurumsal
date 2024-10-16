@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('logos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->integer('number')->nullable(); // Logo sırası veya önceliği için
+            $table->string('alt')->nullable(); // Alt metin için (erişilebilirlik)
+            $table->timestamps(); // created_at ve updated_at için
         });
     }
 

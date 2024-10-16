@@ -36,6 +36,12 @@
     </a>
 </li>
 <li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.logos.index') }}">
+        <i class="ti-gallery menu-icon"></i>
+        <span class="menu-title">Logolar</span>
+    </a>
+</li>
+<li class="nav-item">
     <a class="nav-link" href="{{ route('admin.team.index') }}">
         <i class="ti-headphone menu-icon"></i>
         <span class="menu-title">Ekibimiz</span>

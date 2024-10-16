@@ -8,6 +8,7 @@ use App\Models\CompanyAddress;
 use App\Models\ContactForm;
 use App\Models\CustomerReview;
 use App\Models\GalleryImage;
+use App\Models\Logo;
 use App\Models\OurService;
 use App\Models\Page;
 use App\Models\Setting;
@@ -39,9 +40,10 @@ class WellcomeController extends Controller
         $setting = Setting::first();
         $sliders = Slider::all();
         $backgroundImages = BackgroundImage::orderBY('number')->get();
+        $logos = Logo::orderBy('number')->get();
 
 
-        return view('welcome',compact('address','comments','socials','services','teams','galleries','pages','setting','sliders','backgroundImages'));
+        return view('welcome',compact('address','comments','socials','services','teams','galleries','pages','setting','sliders','backgroundImages','logos'));
     }
 
     public function contact_form(Request $request)

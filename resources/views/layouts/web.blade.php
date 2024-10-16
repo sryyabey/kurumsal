@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <!--
 =======================================================================================
@@ -250,7 +250,7 @@
                         <div class="portfolio-box">
                             <figure class="portfolio-image"><img src="{{ $gallery->getFirstMediaUrl('gallery_images') }}" alt="portfolio image"></figure><!-- close portfolio image -->
                             <div class="portfolio-caption">
-                                <h3 class="portfolio-title">Camera<span class="portfolio-category">{{ $gallery->title }}</span></h3>
+                                <h3 class="portfolio-title">{{ $gallery->title }}<span class="portfolio-category">{{ $gallery->title }}</span></h3>
                             </div><!-- close portfolio caption -->
                         </div>
                     </a>
@@ -439,40 +439,25 @@
 
                 <div class="client-holder grid-parent grid-100 tablet-grid-100 mobile-grid-100">
 
-                    <!-- client box -->
-                    <div class="grid-20 tablet-grid-20 mobile-grid-50">
-                        <div class="client-logo">
-                            <a href="#"><img src="{{ asset('web/images/logo1.png') }}" alt="client logo"></a>
+                    <div class="container">
+                        <div class="row">
+                            @foreach ($logos as $logo)
+                                <!-- client box -->
+                                <div class="grid-20 tablet-grid-20 mobile-grid-50">
+                                    <div class="client-logo">
+                                        <a href="#">
+                                            @if($logo->getFirstMediaUrl('logos'))
+                                                <img src="{{ $logo->getFirstMediaUrl('logos') }}" alt="{{ $logo->alt }}" width="100px">
+                                            @else
+                                                <img src="{{ asset('web/images/default-logo.png') }}" alt="default logo">
+                                            @endif
+                                        </a>
+                                    </div>
+                                </div><!-- close client box -->
+                            @endforeach
                         </div>
-                    </div><!-- close client box -->
+                    </div>
 
-                    <!-- client box -->
-                    <div class="grid-20 tablet-grid-20 mobile-grid-50">
-                        <div class="client-logo">
-                            <a href="#"><img src="{{ asset('web/images/logo2.png') }}" alt="client logo"></a>
-                        </div>
-                    </div><!-- close client box -->
-
-                    <!-- client box -->
-                    <div class="grid-20 tablet-grid-20 mobile-grid-50">
-                        <div class="client-logo">
-                            <a href="#"><img src="{{ asset('web/images/logo3.png') }}" alt="client logo"></a>
-                        </div>
-                    </div><!-- close client box -->
-
-                    <!-- client box -->
-                    <div class="grid-20 tablet-grid-20 mobile-grid-50">
-                        <div class="client-logo">
-                            <a href="#"><img src="{{ asset('web/images/logo4.png') }}" alt="client logo"></a>
-                        </div>
-                    </div><!-- close client box -->
-
-                    <!-- client box -->
-                    <div class="grid-20 tablet-grid-20 mobile-grid-50">
-                        <div class="client-logo">
-                            <a href="#"><img src="{{ asset('web/images/logo5.png') }}" alt="client logo"></a>
-                        </div>
-                    </div><!-- close client box -->
 
                 </div><!-- close client-holder -->
 
