@@ -23,6 +23,12 @@
             z-index: 1000;
         }
 
+        .siteback {
+            background-color: #efebde;
+        }
+        .textcolor{
+            color: #5f5143;
+        }
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -34,7 +40,7 @@
 
 <!-- Page Layout
 ================================================== -->
-<a href="https://wa.me/905425061949" class="whatsapp-button" target="_blank">
+<a href="https://wa.me/905335942025" class="whatsapp-button" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 <!-- header section -->
@@ -45,7 +51,7 @@
                 <div class="grid-20 tablet-grid-20 hide-on-mobile">
                     <h1 class="logo"><a href="#top"><img src="{{ asset('web/images/logo.png') }}" alt="logo"></a></h1>
                 </div>
-                <nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile">
+                <nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile textcolor">
                     <a class="selected" href="#top">Anasayfa</a>
                     <a href="#about-section">Hakkımızda</a>
                     <a href="#team-section">Ekibimiz</a>
@@ -69,7 +75,7 @@
         <!-- hero holder -->
         <div class="hero-holder grid-70 mobile-grid-100 tablet-grid-100">
             <div class="hero-inner">
-                <span class="hero-description">main başlık</span>
+                <span class="hero-description">Efruz Psikoloji</span>
                 <div class="hero-title-holder">
                     <h1 class="hero-title">
                         @forelse($sliders as $key => $slider)
@@ -81,7 +87,7 @@
                         @endforelse
                     </h1>
                 </div>
-                <span class="btn-holder"><a id="to-about-section" class="hero-btn">HaleNur </a></span>
+                <span class="btn-holder"><a id="to-about-section" class="hero-btn">Denizli</a></span>
             </div>
         </div><!-- close hero-holder -->
     </div>
@@ -105,12 +111,12 @@
                 </div>
                 <!-- close section header -->
                 @forelse($pages as $page)
-                <div class="grid-50 tablet-grid-100 mobile-grid-100 about-box">
-                    <figure class="about-icon"><img src="{{ $page->getFirstMediaUrl('images', 'thumb') }}" alt="app-development"></figure>
+                <div class="grid-50 tablet-grid-100 mobile-grid-100 about-box" >
+                    <figure class="about-icon siteback" ><img src="{{ $page->getFirstMediaUrl('images', 'thumb') }}" alt="app-development"></figure>
 
-                    <div class="about-box">
+                    <div class="about-box" >
                         <h3>{{ $page->title }}</h3>
-                        <p>{{ \Illuminate\Support\Str::limit($page->content,50) }}</p>
+                        <p class="textcolor">{{ \Illuminate\Support\Str::limit($page->content,50) }}</p>
                     </div>
                 </div>
                 @empty
@@ -186,50 +192,7 @@
         <section id="counter-section" class="counter-section parallax-section parallax-banner-6 parallax-background">
             <div class="parallax-overlay parallax-overlay-6"></div>
             <div class="grid-container parallax-content">
-                <div class="grid-parent grid-100 mobile-grid-100 tablet-grid-100">
 
-                    <!-- parallax header -->
-                    <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
-                        <header class="parallax-header">
-                            <h2 class="parallax-title"><span>{{ $setting->statistic_title }}</span></h2>
-                            <p class="parallax-slogan">{!! $setting->statistic_description !!}</p>
-                        </header>
-                    </div>
-                    <!-- close parallax header -->
-
-                    <!-- counter box 1 -->
-                    <div class="grid-25 mobile-grid-100 tablet-grid-25">
-                        <div class="counter-box counter" data-counter="1270">
-                            <span class="count">1270</span>
-                            <h3 class="counter-details">Twinkies Eaten</h3>
-                        </div>
-                    </div><!-- close counter box -->
-
-                    <!-- counter box 2 -->
-                    <div class="grid-25 mobile-grid-100 tablet-grid-25">
-                        <div class="counter-box counter" data-counter="75">
-                            <span class="count">75</span>
-                            <h3 class="counter-details">Clients Worked With</h3>
-                        </div>
-                    </div><!-- close counter box -->
-
-                    <!-- counter box 3 -->
-                    <div class="grid-25 mobile-grid-100 tablet-grid-25">
-                        <div class="counter-box counter" data-counter="75">
-                            <span class="count">75</span>
-                            <h3 class="counter-details">Completed Projects</h3>
-                        </div>
-                    </div><!-- close counter box -->
-
-                    <!-- counter box 4 -->
-                    <div class="grid-25 mobile-grid-100 tablet-grid-25">
-                        <div class="counter-box counter" data-counter="4">
-                            <span class="count">4</span>
-                            <h3 class="counter-details">Winning Awards</h3>
-                        </div>
-                    </div><!-- close counter box -->
-
-                </div><!-- close grid-100 -->
             </div><!-- close grid container -->
         </section><!-- close parallax banner 3-->
 
@@ -410,7 +373,7 @@
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="section-header">
                         <h2 class="section-title"><span>{{ $setting->preview_title }}</span></h2>
-                        <p class="section-slogan">{!! $setting->preview_description !!}</p>
+                        <p class="section-slogan textcolor">{!! $setting->preview_description !!}</p>
                     </header>
                 </div>
                 <!-- close section header -->
@@ -436,8 +399,8 @@
                             <ul class="slides">
                                 @forelse($comments as $comment)
                                 <li>
-                                    <span class="ut-quote-comment">{{ Str::limit($comment->comment, 250) }}</span>
-                                    <h3 class="ut-quote-name">{{ $comment->first_name }}</h3>
+                                    <span class="ut-quote-comment textcolor">{{ Str::limit($comment->comment, 250) }}</span>
+                                    <h3 class="ut-quote-name textcolor">{{ $comment->first_name }}</h3>
                                 </li>
                                 @empty
                                     <li>
@@ -593,7 +556,7 @@
         <div class="grid-container">
             <div class="grid-100 mobile-grid-100 tablet-grid-100">
                 <h3>{!!  $setting->footer_title !!} </h3>
-                <span class="copyright">Powered by <a href="htts://sryya.dev" target="_blank">United Themes | sryya.dev</a></span>
+                <span class="copyright">Powered by <a href="htts://taibadijital.com" target="_blank">TaibaDijital | sryya.dev</a></span>
             </div>
         </div><!-- close container -->
     </footer><!-- close footer -->

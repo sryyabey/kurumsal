@@ -6,7 +6,7 @@
             <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                 <header class="section-header">
                     <h2 class="section-title"><span>{{ $setting->team_title }}</span></h2>
-                    <p class="section-slogan">{!! $setting->team_description !!}</p>
+                    <p class="section-slogan textcolor">{!! $setting->team_description !!}</p>
                 </header>
             </div>
             <!-- close section header -->
@@ -20,7 +20,7 @@
 
                     <div class="member-box">
                         <h3>{{ $team->getFullNameAttribute() }}</h3>
-                        <span>{{ $team->position }}</span>
+                        <span class="textcolor">{{ $team->position }}</span>
                     </div>
 
                 </div>

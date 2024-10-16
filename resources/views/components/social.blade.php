@@ -21,7 +21,7 @@
                         <li class="{{ $social->title }} grid-20 tablet-grid-20 mobile-grid-50">
                             <a class="social-link" href="{{ $social->link }}" target="_blank">
                                 <span class="social-icon"><i class="icon-{{ $social->title }} icon-4x"></i></span>
-                                <h3 class="social-title">{{ $social->title }}</h3>
+                                <h3 class="social-title" style="color: white">{{ $social->title }}</h3>
                                 <span class="social-info">Katıl</span>
                             </a>
                         </li>
