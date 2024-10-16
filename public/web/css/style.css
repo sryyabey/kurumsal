@@ -335,6 +335,7 @@ img {
 	color:#FFFFFF;
 	background:rgba(255, 255, 255, 0.15);
 }
+
 .hero-poster-image {
 	background:url('../images/parallax-banner-1.jpg');
 	background-repeat:no-repeat;
@@ -345,6 +346,8 @@ img {
 	backface-visibility:hidden;
 	background-position:center center;
 }
+
+
 
 /* #About Section
 ================================================== */
@@ -888,6 +891,8 @@ img {
 .parallax-background.fixed {
 	background-attachment: fixed !important;
 }
+
+/*
 .parallax-banner-1 { background:url('../images/parallax-banner-1.jpg'); background-position: center center; }
 .parallax-banner-2 { background:url('../images/parallax-banner-2.jpg'); background-position: center center; }
 .parallax-banner-3 { background:url('../images/parallax-banner-3.jpg'); }
@@ -895,7 +900,7 @@ img {
 .parallax-banner-5 { background:url('../images/parallax-banner-5.jpg'); }
 .parallax-banner-6 { background:url('../images/parallax-banner-6.jpg'); }
 .parallax-banner-7 { background:url('../images/404.jpg'); }
-
+*/
 
 .parallax-overlay-1 { background-image: url('../images/overlay-pattern.png'); }
 .parallax-overlay-2 { background-image: url('../images/overlay-pattern.png'); }

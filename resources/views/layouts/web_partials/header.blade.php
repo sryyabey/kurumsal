@@ -47,3 +47,4 @@
 <script src="{{ asset('web/js/SmoothScroll.js') }}"></script>
 <script src="{{ asset('web/js/modernizr.js') }}"></script>
 <script src="{{ asset('web/js/device.min.js') }}"></script>
+

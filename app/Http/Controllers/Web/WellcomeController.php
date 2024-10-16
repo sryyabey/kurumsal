@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\BackgroundImage;
 use App\Models\CompanyAddress;
 use App\Models\ContactForm;
 use App\Models\CustomerReview;
@@ -37,8 +38,10 @@ class WellcomeController extends Controller
         $pages = Page::all();
         $setting = Setting::first();
         $sliders = Slider::all();
+        $backgroundImages = BackgroundImage::orderBY('number')->get();
 
-        return view('welcome',compact('address','comments','socials','services','teams','galleries','pages','setting','sliders'));
+
+        return view('welcome',compact('address','comments','socials','services','teams','galleries','pages','setting','sliders','backgroundImages'));
     }
 
     public function contact_form(Request $request)

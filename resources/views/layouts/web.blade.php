@@ -29,6 +29,18 @@
         .textcolor{
             color: #5f5143;
         }
+
+
+
+         @foreach ($backgroundImages as $key => $backgroundImage)
+                        .parallax-banner-{{ $key + 1 }} {
+             background: url('{{ $backgroundImage->getFirstMediaUrl('images') }}') no-repeat center center;
+             background-size: cover;
+         }
+        @endforeach
+    </style>
+
+
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
