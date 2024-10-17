@@ -24,6 +24,24 @@
     </a>
 </li>
 <li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.sliders.index') }}">
+        <i class="ti-gallery menu-icon"></i>
+        <span class="menu-title">Slider</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.background-images.index') }}">
+        <i class="ti-gallery menu-icon"></i>
+        <span class="menu-title">Akraplan Resimler</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.logos.index') }}">
+        <i class="ti-gallery menu-icon"></i>
+        <span class="menu-title">Logolar</span>
+    </a>
+</li>
+<li class="nav-item">
     <a class="nav-link" href="{{ route('admin.team.index') }}">
         <i class="ti-headphone menu-icon"></i>
         <span class="menu-title">Ekibimiz</span>
@@ -51,6 +69,12 @@
     <a class="nav-link" href="{{ route('admin.customer_reviews.index') }}">
         <i class="ti-face-smile menu-icon"></i>
         <span class="menu-title">Müşteri Yorumları</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('admin.settings.index') }}">
+        <i class="ti-settings menu-icon"></i>
+        <span class="menu-title">Site Ayarları</span>
     </a>
 </li>
 <!--

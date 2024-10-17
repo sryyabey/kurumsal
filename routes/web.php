@@ -11,11 +11,16 @@ use App\Http\Controllers\Admin\CompanyAddressController;
 use App\Http\Controllers\Admin\OurServiceController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\CustomerReviewController;
+use App\Http\Controllers\Web\WellcomeController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\BackgroundImageController;
+use App\Http\Controllers\Admin\LogoController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[WellcomeController::class,'index'])->name('welcome');
+Route::post('/contact_me',[WellcomeController::class,'contact_form'])->name('contact_me');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,11 +36,15 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('gallery', GalleryImageController::class)->names('gallery');
 
     Route::resource('team', TeamController::class)->names('admin.team');
+    Route::resource('setting', SettingController::class)->names('admin.settings');
 
     Route::resource('company_address', CompanyAddressController::class)->names('admin.company_address');
     Route::resource('our_services', OurServiceController::class)->names('admin.our_services');
     Route::resource('socials', SocialController::class)->names('admin.socials');
     Route::resource('customer_reviews', CustomerReviewController::class)->names('admin.customer_reviews');
+    Route::resource('sliders', SliderController::class)->names('admin.sliders');
+    Route::resource('background-images', BackgroundImageController::class)->names('admin.background-images');
+    Route::resource('logos', LogoController::class)->names('admin.logos');
 
 
 
