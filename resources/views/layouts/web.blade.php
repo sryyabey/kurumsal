@@ -117,8 +117,8 @@
                 <!-- section header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="section-header">
-                        <h2 class="section-title"><span>{{ $setting->about_title }}</span></h2>
-                        <p class="section-slogan">{!! $setting->about_description !!}</p>
+                        <h2 class="section-title"><span>{{ $setting->about_title ?? '' }}</span></h2>
+                        <p class="section-slogan">{!! $setting->about_description ?? '' !!}</p>
                     </header>
                 </div>
                 <!-- close section header -->
@@ -182,8 +182,8 @@
                 <!-- parallax header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="parallax-header">
-                        <h2 class="parallax-title"><span>{{ $setting->slogan_title }}</span></h2>
-                        <p class="parallax-slogan">{!! $setting->slogan_description !!}</p>
+                        <h2 class="parallax-title"><span>{{ $setting->slogan_title ?? '' }}</span></h2>
+                        <p class="parallax-slogan">{!! $setting->slogan_description ?? '' !!}</p>
                     </header>
                 </div>
                 <!-- close parallax header -->
@@ -197,7 +197,7 @@
 
     <!-- team section -->
     <div class="nav-waypoint">
-        <x-teams :$teams :$setting />
+        <x-teams :$teams ?? [] :$setting ?? [] />
         <div class="clear"></div>
 
         <!-- Counter Section -->
@@ -222,7 +222,7 @@
 
     <!-- service section -->
     <div class="nav-waypoint">
-       <x-services :$services :$setting />
+       <x-services :$services ?? [] :$setting ?? [] />
     </div><!-- close nav-waypoint -->
 
     <div class="clear"></div>
@@ -235,8 +235,8 @@
                 <!-- section header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="section-header">
-                        <h2 class="section-title"><span>{{ $setting->gallery_title }}</span></h2>
-                        <p class="section-slogan">{{ $setting->gallery_description }}</p>
+                        <h2 class="section-title"><span>{{ $setting->gallery_title ?? '' }}</span></h2>
+                        <p class="section-slogan">{{ $setting->gallery_description ?? '' }}</p>
                     </header>
                 </div>
                 <!-- close section header -->
@@ -370,7 +370,7 @@
         <div class="clear"></div>
 
         <!-- social section -->
-        <x-social :$socials :$setting/>
+        <x-social :$socials ?? [] :$setting ?? []/>
     </div><!-- close nav-waypoint -->
 
     <div class="clear"></div>
@@ -384,8 +384,8 @@
                 <!-- section header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="section-header">
-                        <h2 class="section-title"><span>{{ $setting->preview_title }}</span></h2>
-                        <p class="section-slogan textcolor">{!! $setting->preview_description !!}</p>
+                        <h2 class="section-title"><span>{{ $setting->preview_title ?? '' }}</span></h2>
+                        <p class="section-slogan textcolor">{!! $setting->preview_description ?? '' !!}</p>
                     </header>
                 </div>
                 <!-- close section header -->
@@ -477,8 +477,8 @@
                 <!-- parallax header -->
                 <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                     <header class="parallax-header">
-                        <h2 class="parallax-title"><span>{{ $setting->contact_title }}</span></h2>
-                        <p class="parallax-slogan">{!! $setting->contact_description !!}</p>
+                        <h2 class="parallax-title"><span>{{ $setting->contact_title ?? '' }}</span></h2>
+                        <p class="parallax-slogan">{!! $setting->contact_description ?? '' !!}</p>
                     </header>
                 </div>
                 <!-- close parallax header -->
@@ -495,11 +495,11 @@
                             <div class="contact-message">
                                 <h3 class="grid-100">Adresimiz</h3>
                                 <ul class="icons-ul">
-                                    <li><i class="icon-li icon-home"></i>{{ $address->description  }}</li>
-                                    <li><i class="icon-li icon-home"></i>{{ $address->district  }} | {{ $address->city }} | {{ $address->country }}</li>
-                                    <li><i class="icon-li icon-phone"></i>{{ $address->phone }}</li>
-                                    <li><i class="icon-li icon-envelope-alt"></i>{{ $address->email }}</li>
-                                    <li><i class="icon-li icon-globe"></i>{{ $address->website_link }}</li>
+                                    <li><i class="icon-li icon-home"></i>{{ $address->description ?? ''  }}</li>
+                                    <li><i class="icon-li icon-home"></i>{{ $address->district ?? ''  }} | {{ $address->city ?? '' }} | {{ $address->country ?? '' }}</li>
+                                    <li><i class="icon-li icon-phone"></i>{{ $address->phone ?? '' }}</li>
+                                    <li><i class="icon-li icon-envelope-alt"></i>{{ $address->email ?? '' }}</li>
+                                    <li><i class="icon-li icon-globe"></i>{{ $address->website_link ?? '' }}</li>
                                 </ul>
                             </div>
                         </div><!-- close contact message -->
@@ -552,7 +552,7 @@
         <a href="#top" class="toTop"><i class="icon-angle-up"></i></a>
         <div class="grid-container">
             <div class="grid-100 mobile-grid-100 tablet-grid-100">
-                <h3>{!!  $setting->footer_title !!} </h3>
+                <h3>{!!  $setting->footer_title ?? '' !!} </h3>
                 <span class="copyright">Powered by <a href="htts://taibadijital.com" target="_blank">TaibaDijital | sryya.dev</a></span>
             </div>
         </div><!-- close container -->
