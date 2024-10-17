@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');  // User ile ilişki
             $table->string('title');                // Sayfa başlığı
             $table->string('slug')->unique();       // URL dostu sayfa ismi
-            $table->text('content');                // Sayfa içeriği
+            $table->text('content')->nullable();                // Sayfa içeriği
             $table->string('status')->default('draft'); // Yayın durumu (taslak veya yayınlanmış)
 
             // SEO alanları
@@ -30,7 +30,7 @@ return new class extends Migration
             // Menüde görünüp görünmeyeceği
             $table->boolean('show_in_menu')->default(true);  // Menüde görünsün mü
             $table->boolean('show_in_home')->default(false);  // Menüde görünsün mü
-            $table->integer('number');  // Menüde görünsün mü
+            $table->integer('number')->nullable();  // Menüde görünsün mü
 
             $table->timestamps();
 
