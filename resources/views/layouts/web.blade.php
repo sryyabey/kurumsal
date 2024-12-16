@@ -62,7 +62,8 @@
             <div class="ha-header-front">
                 <div class="grid-20 tablet-grid-20 hide-on-mobile">
                     <h1 class="logo">
-                        @if($logo->getFirstMediaUrl('logos'))
+                        @php($logo = \App\Models\Logo::first())
+                        @if($logo)
                             <img src="{{ $logo->getFirstMediaUrl('logos') }}" alt="{{ $logo->alt }}" width="100px">
                         @else
                             <img src="{{ asset('web/images/default-logo.png') }}" alt="default logo">
