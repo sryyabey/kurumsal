@@ -62,7 +62,11 @@
             <div class="ha-header-front">
                 <div class="grid-20 tablet-grid-20 hide-on-mobile">
                     <h1 class="logo">
-                        <a href="#top"><img src="{{ asset('web/images/logo.png') }}" alt="logo"></a>
+                        @if($logo->getFirstMediaUrl('logos'))
+                            <img src="{{ $logo->getFirstMediaUrl('logos') }}" alt="{{ $logo->alt }}" width="100px">
+                        @else
+                            <img src="{{ asset('web/images/default-logo.png') }}" alt="default logo">
+                        @endif
                     </h1>
                 </div>
                 <nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile textcolor">
@@ -112,7 +116,7 @@
 <div id="main-content" class="wrap">
 
     <!-- about section -->
-    <div class="nav-waypoint">
+     <div class="nav-waypoint">
         <section id="about-section" class="about-section content-section ha-waypoint" data-animate-up="ha-header-hide" data-animate-down="ha-header-small">
             <div class="grid-container">
 
