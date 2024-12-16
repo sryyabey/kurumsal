@@ -64,7 +64,7 @@
                     <h1 class="logo">
                         @php($logo = \App\Models\Logo::first())
                         @if($logo)
-                            <img src="{{ $logo->getFirstMediaUrl('logos') }}" alt="{{ $logo->alt }}" width="100px">
+                            <img src="{{ $logo->getFirstMediaUrl('logos') }}" alt="{{ $logo->alt }}">
                         @else
                             <img src="{{ asset('web/images/default-logo.png') }}" alt="default logo">
                         @endif
