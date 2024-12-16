@@ -61,7 +61,9 @@
         <div class="ha-header-perspective">
             <div class="ha-header-front">
                 <div class="grid-20 tablet-grid-20 hide-on-mobile">
-                    <h1 class="logo"><a href="#top"><img src="{{ asset('web/images/logo.png') }}" alt="logo"></a></h1>
+                    <h1 class="logo">
+                        <a href="#top"><img src="{{ asset('web/images/logo.png') }}" alt="logo"></a>
+                    </h1>
                 </div>
                 <nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile textcolor">
                     <a class="selected" href="#top">Anasayfa</a>
@@ -128,7 +130,7 @@
 
                     <div class="about-box" >
                         <h3>{{ $page->title }}</h3>
-                        <p class="textcolor">{{ \Illuminate\Support\Str::limit($page->content,50) }}</p>
+                        <p class="textcolor">{{ $page->content  }}</p>
                     </div>
                 </div>
                 @empty
