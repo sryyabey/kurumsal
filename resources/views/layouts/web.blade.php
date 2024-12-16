@@ -204,7 +204,124 @@
 
     <!-- team section -->
     <div class="nav-waypoint">
-        <x-teams :$teams ?? [] :$setting ?? [] />
+        <section id="team-section" class="team-section content-section">
+            <div class="grid-container">
+
+                <!-- section header -->
+                <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                    <header class="section-header">
+                        <h2 class="section-title"><span>{{ $setting->team_title ?? '' }}</span></h2>
+                        <p class="section-slogan textcolor">{!! $setting->team_description ?? '' !!}</p>
+                    </header>
+                </div>
+                <!-- close section header -->
+
+                <div class="clear"></div>
+
+                <!-- member 1 -->
+                @forelse($teams as $team)
+                    <div class="member-box grid-25 mobile-grid-100 tablet-grid-50">
+                        <figure class="member-photo"><img src="{{ $team->getProfileImageUrl() }}" alt="member"></figure>
+
+                        <div class="member-box">
+                            <h3>{{ $team->getFullNameAttribute() }}</h3>
+                            <span class="textcolor">{{ $team->position }}</span>
+                        </div>
+
+                    </div>
+                @empty
+                    <div class="member-box grid-25 mobile-grid-100 tablet-grid-50">
+                        <figure class="member-photo"><img src="images/member1.jpg" alt="member"></figure>
+
+                        <div class="member-box">
+                            <h3></h3>
+                            <span></span>
+                        </div>
+
+                    </div>
+                @endforelse
+                <!-- close member -->
+
+                <!-- member 2
+                <div class="member-box grid-25 mobile-grid-100 tablet-grid-50">
+                    <figure class="member-photo"><img src="images/member2.jpg" alt="member"></figure>
+
+                    <div class="member-box">
+                        <h3>Jesse Pinkman</h3>
+                        <span>Manufacturer</span>
+                    </div>
+
+                </div><!-- close member -->
+
+                <!-- member 3
+                <div class="member-box grid-25 mobile-grid-100 tablet-grid-50">
+                    <figure class="member-photo"><img src="images/member3.jpg" alt="member"></figure>
+
+                    <div class="member-box">
+                        <h3>Mike Ehrmantraut</h3>
+                        <span>Private Investigator</span>
+                    </div>
+
+                </div><!-- close member -->
+
+                <!-- member 4
+                <div class="member-box grid-25 mobile-grid-100 tablet-grid-50">
+                    <figure class="member-photo"><img src="images/member4.jpg" alt="member"></figure>
+
+                    <div class="member-box">
+                        <h3>Gustavo Fring</h3>
+                        <span>Philanthropist</span>
+                    </div>
+
+                </div><!-- close member -->
+
+                <!-- member 5
+                <div class="member-box grid-25 mobile-grid-100 tablet-grid-50">
+                    <figure class="member-photo"><img src="images/member5.jpg" alt="member"></figure>
+
+                    <div class="member-box">
+                        <h3>Wendy S.</h3>
+                        <span>The Crossroads Motel</span>
+                    </div>
+
+                </div><!-- close member -->
+
+                <!-- member 6
+                <div class="member-box grid-25 mobile-grid-100 tablet-grid-50">
+                    <figure class="member-photo"><img src="images/member6.jpg" alt="member"></figure>
+
+                    <div class="member-box">
+                        <h3>Skyler White</h3>
+                        <span>Bookkeeper</span>
+                    </div>
+
+                </div><!-- close member -->
+
+                <!-- member 7
+                <div class="member-box grid-25 mobile-grid-100 tablet-grid-50">
+                    <figure class="member-photo"><img src="images/member7.jpg" alt="member"></figure>
+
+                    <div class="member-box">
+                        <h3>Saul Goodman</h3>
+                        <span>Manager</span>
+                    </div>
+
+                </div><!-- close member -->
+
+                <!-- member 8
+                <div class="member-box grid-25 mobile-grid-100 tablet-grid-50">
+                    <figure class="member-photo"><img src="images/member8.jpg" alt="member"></figure>
+
+                    <div class="member-box">
+                        <h3>Todd Alquist</h3>
+                        <span>Lab assistant for Mr. White</span>
+                    </div>
+
+                </div><!-- close member -->
+
+            </div><!-- close grid-container -->
+        </section><!-- close team section -->
+
         <div class="clear"></div>
 
         <!-- Counter Section -->
@@ -229,7 +346,75 @@
 
     <!-- service section -->
     <div class="nav-waypoint">
-       <x-services :$services ?? [] :$setting ?? [] />
+        <section id="service-section" class="parallax-section parallax-banner-3 parallax-background service-section">
+            <div class="parallax-overlay parallax-overlay-3"></div>
+            <div class="grid-container parallax-content">
+                <div class="grid-parent grid-100 mobile-grid-100 tablet-grid-100">
+
+                    <!-- entry header -->
+                    <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                        <header class="parallax-header">
+                            <h2 class="parallax-title"><span>{{ $setting->services_title ?? '' }}</span></h2>
+                            <p class="parallax-slogan">{!! $setting->services_description ?? '' !!}</p>
+                        </header>
+                    </div>
+                    <!-- close entry header -->
+
+                    <!-- icon box 1 -->
+                    @forelse($services as $service)
+                        <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                            <div class="box-fade icon-box">
+                                <div class="arrow-right"></div>
+                                <i class="{{ $service->icon }} icon-4x service-icon"></i>
+                            </div>
+                            <div class="box-fade info">
+                                <h3>{{ $service->title }}</h3>
+                                <p>{{ \Illuminate\Support\Str::limit($service->description,50) }}</p>
+                            </div>
+                        </div>
+                    @empty
+                        <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                            <div class="box-fade icon-box">
+                                <div class="arrow-right"></div>
+                                <i class="icon-time icon-4x service-icon"></i>
+                            </div>
+                            <div class="box-fade info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    @endforelse
+                    <!-- close icon box -->
+
+                    <!-- icon box 2
+                    <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                        <div class="box-fade icon-box">
+                            <div class="arrow-right"></div>
+                            <i class="icon-globe icon-4x service-icon"></i>
+                        </div>
+                        <div class="box-fade info">
+                            <h3>Systems Integration</h3>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+                        </div>
+
+                    </div><!-- close icon box -->
+
+                    <!-- icon box 3
+                    <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                        <div class="box-fade icon-box">
+                            <div class="arrow-right"></div>
+                            <i class="icon-umbrella icon-4x service-icon"></i>
+                        </div>
+                        <div class="box-fade info">
+                            <h3>Support</h3>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+                        </div>
+                    </div><!-- close icon box -->
+
+                </div><!-- close grid-100 -->
+            </div><!-- close grid container -->
+        </section><!-- close service section -->
+
     </div><!-- close nav-waypoint -->
 
     <div class="clear"></div>
@@ -377,8 +562,74 @@
         <div class="clear"></div>
 
         <!-- social section -->
-        <x-social :$socials ?? [] :$setting ?? []/>
-    </div><!-- close nav-waypoint -->
+<section id="social-section" class="parallax-section parallax-banner-4 parallax-background social-section">
+    <div class="parallax-overlay parallax-overlay-4"></div><!-- parallax overlay -->
+    <div class="grid-container parallax-content">
+        <div class="grid-parent grid-100 mobile-grid-100 tablet-grid-100">
+
+            <!-- parallax header -->
+            <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                <header class="parallax-header">
+                    <h2 class="parallax-title"><span>{{ $setting->social_title ?? '' }}</span></h2>
+                    <p class="parallax-slogan">{!! $setting->social_description ?? '' !!}</p>
+                </header>
+            </div>
+            <!-- close parallax header -->
+
+            <div class="clear"></div>
+
+            <!-- social network -->
+            <ul class="social-network">
+                @forelse($socials as $social)
+                    <li class="{{ $social->title }} grid-20 tablet-grid-20 mobile-grid-50">
+                        <a class="social-link" href="{{ $social->link }}" target="_blank">
+                            <span class="social-icon"><i class="icon-{{ $social->title }} icon-4x"></i></span>
+                            <h3 class="social-title" style="color: white">{{ $social->title }}</h3>
+                            <span class="social-info">Katıl</span>
+                        </a>
+                    </li>
+                @empty
+                    <li class="facebook grid-20 tablet-grid-20 mobile-grid-50">
+
+                    </li>
+                @endforelse
+                <!--
+                        <li class="twitter grid-20 tablet-grid-20 mobile-grid-50">
+                            <a class="social-link" href="#" target="_blank">
+                                <span class="social-icon"><i class="icon-twitter icon-4x"></i></span>
+                                <h3 class="social-title">Twitter</h3>
+                                <span class="social-info">Get the Latest News</span>
+                            </a>
+                        </li>
+                        <li class="google-plus grid-20 tablet-grid-20 mobile-grid-50">
+                            <a class="social-link" href="#" target="_blank">
+                                <span class="social-icon"><i class="icon-google-plus icon-4x"></i></span>
+                                <h3 class="social-title">Google Plus</h3>
+                                <span class="social-info">Join Our Circle</span>
+                            </a>
+                        </li>
+                        <li class="youtube grid-20 tablet-grid-20 mobile-grid-50">
+                            <a class="social-link" href="#" target="_blank">
+                                <span class="social-icon"><i class="icon-youtube icon-4x"></i></span>
+                                <h3 class="social-title">YouTube</h3>
+                                <span class="social-info">View Exclusive Videos</span>
+                            </a>
+                        </li>
+                        <li class="instagram grid-20 tablet-grid-20 mobile-grid-50">
+                            <a class="social-link" href="#" target="_blank">
+                                <span class="social-icon"><i class="icon-instagram icon-4x"></i></span>
+                                <h3 class="social-title">Instagram</h3>
+                                <span class="social-info">Latest Images</span>
+                            </a>
+                        </li>
+                        -->
+            </ul><!-- close social network -->
+
+        </div><!-- close grid-100 -->
+    </div><!-- close grid container -->
+</section><!-- close social section -->
+
+</div><!-- close nav-waypoint -->
 
     <div class="clear"></div>
 
