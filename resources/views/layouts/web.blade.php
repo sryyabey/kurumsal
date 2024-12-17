@@ -691,11 +691,11 @@
         <div class="clear"></div>
 
         <!-- client section -->
-        <section id="client-section" class="client-section content-section">
+        <section id="client-section" class="client-section content-section" style="background-color: white;"
 
-            <div class="grid-container">
+            <div class="grid-container" >
 
-                <div class="client-holder grid-parent grid-100 tablet-grid-100 mobile-grid-100">
+                <div class="client-holder grid-parent grid-100 tablet-grid-100 mobile-grid-100" style="background-color: white">
 
                     <div class="container">
                         <div class="row">
@@ -720,7 +720,8 @@
                 </div><!-- close client-holder -->
 
             </div><!-- close container -->
-        </section><!-- close client section -->
+        </section>
+        <!-- close client section -->
 
     </div><!-- close nav-waypoint -->
 
@@ -751,7 +752,7 @@
                         <!-- contact message -->
                         <div class="grid-parent grid-40 suffix-5 mobile-grid-100 tablet-grid-100">
                             <div class="contact-message">
-                                <h3 class="grid-100">Adresimiz</h3>
+                                <h3 class="grid-100" style="color: #936A41">Adresimiz</h3>
                                 <ul class="icons-ul">
                                     <li><i class="icon-li icon-home"></i>{{ $address->description ?? ''  }}</li>
                                     <li><i class="icon-li icon-home"></i>{{ $address->district ?? ''  }} | {{ $address->city ?? '' }} | {{ $address->country ?? '' }}</li>
@@ -767,7 +768,7 @@
                             <div class="contact-form-holder clearfix">
 
 
-                                <h3 class="grid-100">Bize Ulaşın</h3>
+                                <h3 class="grid-100" style="color: #936A41">Bize Ulaşın</h3>
 
                                 <!-- contact form -->
                                 <form class="contact-form" href="{{ route('contact_me') }}">
@@ -785,7 +786,7 @@
                                     </ul>
 
                                     <div class="grid-100">
-                                        <button type="submit" class="">
+                                        <button type="submit" class="" style="color: #936A41">
                                             Gönder
                                         </button>
                                     </div>
